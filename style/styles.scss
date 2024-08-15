@@ -74,40 +74,39 @@ body {
                     height: 20%;
                     border-radius: 40px;
                     border: none;
-                    transition: 0.4s ease;
                     background-color: hsl(230, 22%, 74%);
 
                     &::before {
                         content: '';
                         position: absolute;
-                        top: 2px;
+                        top: 3px;
                         right: 5px;
                         width: 35%;
                         height: 80%;
                         border-radius: 50%;
                         background-color: #fff;
-                        transition: transform 0.4s ease;
+                        transition: 0.6s ease;
                     } // Button Before Container
                 } // Button Container
 
-                input[type="checkbox"] {
+                input {
                     position: absolute;
                     cursor: pointer;
-                    right: 165px;
-                    width: 90px;
-                    height: 20px;
+                    right: 14%;
+                    width: 4%;
+                    height: 3%;
                     z-index: 1;
                     opacity: 0;
 
                     &:checked + button::before {
                         background-color: hsl(230, 17%, 14%) !important;
-                        transform: translateX(-16px);
+                        transform: translateX(-28px);
                     }
 
                     &:checked + button {
                         background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%)) !important;
                     }
-                } // Input Container
+                } // Input
             } // Toggle Theme Container
         } // Top Container
 
@@ -120,7 +119,7 @@ body {
             .box {
                 border-radius: 5px;
                 width: 22%;
-                height: 90%;
+                height: 80%;
                 background-color: hsl(227, 47%, 96%);
                 display: flex;
                 flex-direction: column;
@@ -128,7 +127,7 @@ body {
                 justify-content: space-evenly;
 
                 &:hover {
-                    background-color: hsl(0, 0%, 100%);
+                    background-color: hsla(230, 22%, 74%, 0.674);
                     cursor: pointer;
                 }
 
@@ -182,7 +181,7 @@ body {
         }
 
         .subs_stats_container {
-            height: 30%;
+            height: 35%;
             display: flex;
 
             .left_side {
@@ -213,12 +212,21 @@ body {
 
             .box {
                 background-color: hsl(227, 47%, 96%);
-                border-radius: 15px;
+                border-radius: 10px;
                 height: 100%;
                 width: 100%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+
+                p {
+                    font-size: 16px;
+                }
+
+                &:hover {
+                    background-color: hsl(230, 22%, 74%);
+                    cursor: pointer;
+                }
 
                 h2 {
                     color: hsl(230, 17%, 14%);
@@ -314,6 +322,11 @@ body {
 
         h2 {
             color: #fff !important;
+        }
+
+        &:hover {
+            cursor: pointer !important;
+            background-color: hsla(229, 12%, 44%, 0.653) !important;
         }
     }
 

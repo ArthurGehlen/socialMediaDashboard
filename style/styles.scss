@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@mixin border() {
+    border-radius: 5px 5px 0px 0px;
+    height: 3%;
+    width: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+p {
+    color: hsl(228, 12%, 44%);
+    font-weight: 700;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 1s;
+
+    .bg_container {
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        z-index: -1;
+        width: 100%;
+        height: 25%;
+        background-color: hsl(225, 100%, 98%);
+    }
+
+    .main_container {
+        height: 95%;
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .top_container {
+            width: 100%;
+            height: 15%;
+            display: flex;
+            justify-content: space-between;
+
+            .title_container {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                text-indent: 32px;
+
+                h1 {
+                    font-size: 30px;
+                }
+            }
+
+            .toggle_theme_container {
+                width: 20%;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                font-size: 18px;
+                font-weight: 700;
+
+                button {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    width: 20%;
+                    height: 20%;
+                    border-radius: 40px;
+                    border: none;
+                    transition: 0.4s ease;
+                    background-color: hsl(230, 22%, 74%);
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 2px;
+                        right: 5px;
+                        width: 35%;
+                        height: 80%;
+                        border-radius: 50%;
+                        background-color: #fff;
+                        transition: transform 0.4s ease;
+                    } // Button Before Container
+                } // Button Container
+
+                input[type="checkbox"] {
+                    position: absolute;
+                    cursor: pointer;
+                    right: 165px;
+                    width: 90px;
+                    height: 20px;
+                    z-index: 1;
+                    opacity: 0;
+
+                    &:checked + button::before {
+                        background-color: hsl(230, 17%, 14%) !important;
+                        transform: translateX(-16px);
+                    }
+
+                    &:checked + button {
+                        background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%)) !important;
+                    }
+                } // Input Container
+            } // Toggle Theme Container
+        } // Top Container
+
+        .follower_stats_container {
+            width: 100%;
+            height: 35%;
+            display: flex;
+            justify-content: space-evenly;
+
+            .box {
+                border-radius: 5px;
+                width: 22%;
+                height: 90%;
+                background-color: hsl(227, 47%, 96%);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+
+                &:hover {
+                    background-color: hsl(0, 0%, 100%);
+                    cursor: pointer;
+                }
+
+                .user {
+                    height: 25%;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 5.5px;
+
+                    p {
+                        font-size: 14px;
+                    }
+                }
+
+                .followers {
+                    height: 50%;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+
+                    h2 {
+                        color: hsl(230, 17%, 14%);
+                        font-size: 50px;
+                    }
+
+                    p {
+                        font-weight: 400;
+                        font-size: 14px;
+                        letter-spacing: 4px;
+                    }
+                } // Followers Container
+
+                .stat {
+                    height: 25%;
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    font-size: 14px;
+                }
+            } // Box Container
+        }  // Follower Stats Container
+
+        .overview_container {
+            text-indent: 35px;
+            height: 8%;
+            color: hsl(228, 12%, 44%);
+            font-size: 20px;
+        }
+
+        .subs_stats_container {
+            height: 30%;
+            display: flex;
+
+            .left_side {
+                padding-right: 20px;
+                padding-left: 30px;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                height: 100%;
+                width: 50%;
+
+                .upper_part {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 40px;
+                    height: 50%;
+                    width: 100%;
+                }
+
+                .bottom_part {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 40px;
+                    height: 50%;
+                    width: 100%;
+                }
+            } // Left Side Container
+
+            .box {
+                background-color: hsl(227, 47%, 96%);
+                border-radius: 15px;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                h2 {
+                    color: hsl(230, 17%, 14%);
+                    font-size: 30px;
+                }
+
+                .upper {
+                    display: flex;
+                    height: 40%;
+                    width: 100%;
+                }
+
+                .bottom {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    height: 60%;
+                    width: 100%;
+                }
+            } // Box Container
+
+            .right_side {
+                padding-right: 20px;
+                padding-left: 30px;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                height: 100%;
+                width: 50%;
+
+                .upper_part {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 40px;
+                    height: 50%;
+                    width: 100%;
+                }
+
+                .bottom_part {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 40px;
+                    height: 50%;
+                    width: 100%;
+                }
+            } // Right Side Container
+
+            .text {
+                width: 150%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                padding-left: 30px;
+                font-size: 14px;
+            }
+
+            .stat {
+                width: 40%;
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                gap: 5px;
+            }
+
+            .img {
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                height: 100%;
+                width: 100%;
+                padding-right: 20px;
+            }
+        } // Subs Stats Container
+    }  // Main Container  
+} // Body 
+
+// Dark Mode
+.dark_mode {
+    background-color: hsl(230, 17%, 14%);
+
+    .bg_container {
+        background-color: hsl(232, 19%, 15%);
+    }
+
+    .top_container {
+        .title_container {
+            color: #fff !important;
+        }
+    }
+
+    .box {
+        background-color: hsl(228, 28%, 20%) !important;
+
+        h2 {
+            color: #fff !important;
+        }
+    }
+
+    .overview_container {
+        h2 {
+            color: #fff !important;
+        }
+    }
+} // Dark mode
+
+// Bordas
+#facebook_border {
+    @include border();
+    background-color: hsl(208, 92%, 53%);
+}
+
+#twitter_border {
+    @include border();
+    background-color: hsl(203, 89%, 53%);
+}
+
+#instagram_border {
+    @include border();
+    background: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+}
+
+#youtube_border {
+    @include border();
+    background-color: hsl(348, 97%, 39%);
+}
+
+
+// Status (Positivo e Negativo)
+.up_stat {
+    color: hsl(163, 72%, 41%);
+    font-weight: 700;
+}
+
+.down_stat {
+    color: hsl(356, 69%, 56%);
+    font-weight: 700;
+}

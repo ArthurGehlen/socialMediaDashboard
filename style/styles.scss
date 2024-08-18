@@ -39,11 +39,11 @@ body {
         width: 75%;
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 12px;
 
         .top_container {
             width: 100%;
-            height: 15%;
+            height: 12%;
             display: flex;
             justify-content: space-between;
 
@@ -71,7 +71,7 @@ body {
                     display: flex;
                     justify-content: center;
                     width: 20%;
-                    height: 20%;
+                    height: 25%;
                     border-radius: 40px;
                     border: none;
                     background-color: hsl(230, 22%, 74%);
@@ -79,7 +79,7 @@ body {
                     &::before {
                         content: '';
                         position: absolute;
-                        top: 3px;
+                        top: 2px;
                         right: 5px;
                         width: 35%;
                         height: 80%;
@@ -220,7 +220,7 @@ body {
                 align-items: center;
 
                 p {
-                    font-size: 16px;
+                    font-size: 18px;
                 }
 
                 &:hover {
@@ -230,7 +230,7 @@ body {
 
                 h2 {
                     color: hsl(230, 17%, 14%);
-                    font-size: 30px;
+                    font-size: 40px;
                 }
 
                 .upper {
@@ -245,6 +245,7 @@ body {
                     align-items: center;
                     height: 60%;
                     width: 100%;
+                    // background-color: red;
                 }
             } // Box Container
 

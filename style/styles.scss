@@ -22,7 +22,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background-color 1s;
+    transition: all 1s;
 
     .bg_container {
         position: absolute;
@@ -39,6 +39,7 @@ body {
         width: 75%;
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
         gap: 12px;
 
         .top_container {
@@ -54,7 +55,7 @@ body {
                 text-indent: 32px;
 
                 h1 {
-                    font-size: 30px;
+                    font-size: 32px;
                 }
             }
 
@@ -98,16 +99,16 @@ body {
                     z-index: 1;
                     opacity: 0;
 
-                    &:checked + button::before {
+                    &:checked+button::before {
                         background-color: hsl(230, 17%, 14%) !important;
                         transform: translateX(-28px);
                     }
 
-                    &:checked + button {
+                    &:checked+button {
                         background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%)) !important;
                     }
                 } // Input
-            } // Toggle Theme Container
+            } // Toggle Theme Container 
         } // Top Container
 
         .follower_stats_container {
@@ -153,7 +154,7 @@ body {
 
                     h2 {
                         color: hsl(230, 17%, 14%);
-                        font-size: 50px;
+                        font-size: 55px;
                     }
 
                     p {
@@ -161,7 +162,7 @@ body {
                         font-size: 14px;
                         letter-spacing: 4px;
                     }
-                } // Followers Container
+                }   // Followers Container
 
                 .stat {
                     height: 25%;
@@ -170,8 +171,10 @@ body {
                     gap: 5px;
                     font-size: 14px;
                 }
-            } // Box Container
-        }  // Follower Stats Container
+            }
+
+            // Box Container
+        } // Follower Stats Container
 
         .overview_container {
             text-indent: 35px;
@@ -183,7 +186,7 @@ body {
         .subs_stats_container {
             height: 35%;
             width: 100%;
-            display: flex;  
+            display: flex;
             flex-direction: column;
 
             .upper_part {
@@ -195,7 +198,7 @@ body {
                 height: 50%;
                 width: 100%;
             }
-        
+
             .bottom_part {
                 display: flex;
                 align-items: center;
@@ -204,7 +207,7 @@ body {
                 height: 50%;
                 width: 100%;
                 flex-wrap: wrap;
-            } 
+            }
 
             .box {
                 background-color: hsl(227, 47%, 96%);
@@ -241,7 +244,6 @@ body {
                     align-items: center;
                     height: 60%;
                     width: 100%;
-                    // background-color: red;
                 }
             } // Box Container
 
@@ -270,8 +272,8 @@ body {
                 width: 100%;
                 padding-right: 20px;
             }
-        } // Subs Stats Container
-    }  // Main Container  
+        }  // Subs Stats Container
+    }  // Main Container 
 } // Body 
 
 // Dark Mode
@@ -306,7 +308,7 @@ body {
             color: #fff !important;
         }
     }
-} // Dark mode
+}
 
 // Bordas
 #facebook_border {
@@ -328,7 +330,6 @@ body {
     @include border();
     background-color: hsl(348, 97%, 39%);
 }
-
 
 // Status (Positivo e Negativo)
 .up_stat {

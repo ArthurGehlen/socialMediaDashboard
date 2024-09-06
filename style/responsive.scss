@@ -59,23 +59,24 @@
     }    
 }
 
-@media only screen and (min-width: 900px) and (max-width: 1100px) {
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
     .main_container {
         width: 100% !important;
 
         .toggle_theme_container {
             button {
-                width: 30% !important;
+                width: 35% !important;
                 height: 30% !important;
 
                 &::before {
-                    width: 35% !important;
+                    top: 10% !important;
+                    width: 38% !important;
                 }
             }
 
             input {
                 width: 6% !important;
-                right: 2% !important;
+                right: 1.5% !important;
 
                 &:checked+button::before {
                     transform: translate(-30px) !important;
@@ -84,15 +85,13 @@
         }
 
         .follower_stats_container {
-            // gap: 15px !important;
             padding-bottom: 10px !important;
             justify-content: space-evenly !important;
             height: 35% !important;
             margin-bottom: 0px !important;
-            border: 1px solid black;
 
             .box {
-                width: 22% !important;
+                width: 23.5% !important;
                 height: 70% !important;
     
                 h2 {
@@ -102,17 +101,16 @@
         }
     
         .overview_container {
-            border: 1px solid red;
             text-indent: 25px !important;
         }
     
         .subs_stats_container {
             .upper_part, .bottom_part {
-                gap: 5px !important;
+                gap: 5px !important;    
                 justify-content: space-evenly !important;
 
                 .box {
-                    width: 22.5% !important;
+                    width: 23.5% !important;
 
                     h2 {
                         font-size: 30px !important;
@@ -120,15 +118,113 @@
                 }
         
                 .text {
+                    padding-left: 20px !important;
                     display: flex;
                     justify-content: flex-start !important;
-                    width: 100% !important;
+                    width: 60% !important;
                 
                     p {
                         font-size: 14px !important;
                     }
                 }
+
+                .stat {
+                    width: 100% !important;
+                }
+
+                .img {
+                    padding-right: 20px !important;
+                    width: 40% !important;
+                }
             }
         }
     }    
 }
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    .main_container {
+        width: 100% !important;
+
+        .title_container {
+            text-indent: 5px !important;
+        }
+
+        .toggle_theme_container {
+            width: 30% !important;
+            
+            button {
+                width: 35% !important;
+                height: 30% !important;
+
+                &::before {
+                    top: 10% !important;
+                    width: 38% !important;
+                }
+            }
+
+            input {
+                width: 6% !important;
+                right: 1.5% !important;
+
+                &:checked+button::before {
+                    transform: translate(-30px) !important;
+                }
+            }
+        }
+
+        .follower_stats_container {
+            padding-bottom: 10px !important;
+            justify-content: space-evenly !important;
+            height: 35% !important;
+            margin-bottom: 0px !important;
+
+            .box {
+                width: 23.5% !important;
+                height: 70% !important;
+    
+                h2 {
+                    font-size: 45px !important;
+                }
+            }
+        }
+    
+        .overview_container {
+            text-indent: 5px !important;
+        }
+    
+        .subs_stats_container {
+            .upper_part, .bottom_part {
+                gap: 5px !important;    
+                justify-content: space-evenly !important;
+
+                .box {
+                    width: 23.5% !important;
+
+                    h2 {
+                        font-size: 30px !important;
+                    }
+                }
+        
+                .text {
+                    padding-left: 20px !important;
+                    display: flex;
+                    justify-content: flex-start !important;
+                    width: 60% !important;
+                
+                    p {
+                        font-size: 14px !important;
+                    }
+                }
+
+                .stat {
+                    width: 100% !important;
+                }
+
+                .img {
+                    padding-right: 20px !important;
+                    width: 40% !important;
+                }
+            }
+        }
+    }  
+} 

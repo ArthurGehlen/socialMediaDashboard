@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+@media screen and (min-width: 1200px) and (max-width: 1600px) {
     .main_container {
         width: 90% !important;
 
@@ -59,7 +59,7 @@
     }    
 }
 
-@media only screen and (min-width: 900px) and (max-width: 1200px) {
+@media screen and (min-width: 900px) and (max-width: 1200px) {
     .main_container {
         width: 100% !important;
 
@@ -141,7 +141,7 @@
     }    
 }
 
-@media only screen and (min-width: 600px) and (max-width: 900px) {
+@media screen and (min-width: 600px) and (max-width: 900px) {
     .main_container {
         width: 100% !important;
 
@@ -228,3 +228,52 @@
         }
     }  
 } 
+
+@media screen and (max-height: 600px) {
+    .main_container {
+        .toggle_theme_container {            
+            button {
+                height: 50% !important;
+
+                &::before {
+                    top: 9% !important;
+                    width: 38% !important;
+                }
+            }
+
+            input {
+                &:checked+button::before {
+                    transform: translate(-36px) !important;
+                }
+            }
+        }
+
+        .follower_stats_container {
+            .box {
+                width: 20% !important;
+                height: 100% !important;
+            }
+        }
+
+        .overview_container {
+            text-indent: 35px !important;
+            height: 5% !important;
+        }
+
+        .subs_stats_container {
+            height: 220px !important;
+            .upper_part, .bottom_part {    
+                justify-content: space-around !important;
+
+                .box {
+                    width: 20% !important;
+                    height: 90% !important;
+
+                    h2 {
+                        font-size: 30px !important;
+                    }
+                }
+            }
+        }
+    }
+}

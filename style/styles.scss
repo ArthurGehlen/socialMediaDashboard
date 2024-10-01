@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-@mixin border() {
+@mixin border($bg_color) {
+    background: $bg_color;
     border-radius: 5px 5px 0px 0px;
     height: 3%;
     width: 100%;
@@ -82,7 +83,7 @@ body {
                         position: absolute;
                         top: 2px;
                         right: 5px;
-                        width: 35%;
+                        width: 40%;
                         height: 80%;
                         border-radius: 50%;
                         background-color: #fff;
@@ -301,23 +302,19 @@ body {
 
 // Bordas
 #facebook_border {
-    @include border();
-    background-color: hsl(208, 92%, 53%);
+    @include border(hsl(208, 92%, 53%));
 }
 
 #twitter_border {
-    @include border();
-    background-color: hsl(203, 89%, 53%);
+    @include border(hsl(203, 89%, 53%));
 }
 
 #instagram_border {
-    @include border();
-    background: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    @include border(linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%)));
 }
 
 #youtube_border {
-    @include border();
-    background-color: hsl(348, 97%, 39%);
+    @include border(hsl(348, 97%, 39%));
 }
 
 // Status (Positivo e Negativo)

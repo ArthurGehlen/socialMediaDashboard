@@ -229,11 +229,11 @@
     }  
 } 
 
-@media screen and (max-height: 600px) {
+@media screen and (max-height: 725px) {
     .main_container {
-        .toggle_theme_container {            
+        .toggle_theme_container {       
             button {
-                height: 50% !important;
+                height: 40% !important;
 
                 &::before {
                     top: 9% !important;
@@ -243,12 +243,14 @@
 
             input {
                 &:checked+button::before {
-                    transform: translate(-36px) !important;
+                    transform: translate(-20px) !important;
                 }
             }
         }
 
         .follower_stats_container {
+            justify-content: space-evenly !important;
+            gap: 14px !important;
             .box {
                 width: 20% !important;
                 height: 100% !important;
@@ -261,9 +263,9 @@
         }
 
         .subs_stats_container {
-            height: 220px !important;
+            height: 210px !important;
             .upper_part, .bottom_part {    
-                justify-content: space-around !important;
+                justify-content: space-evenly !important;
 
                 .box {
                     width: 20% !important;

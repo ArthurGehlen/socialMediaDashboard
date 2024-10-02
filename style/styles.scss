@@ -23,7 +23,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 1s;
+    transition: background-color 1s;
 
     .bg_container {
         position: absolute;
@@ -109,7 +109,7 @@ body {
                         background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%)) !important;
                     }
                 } // Input
-            } // Toggle Theme Container 
+            } // Toggle Theme Container
         } // Top Container
 
         .follower_stats_container {
@@ -163,7 +163,9 @@ body {
                         font-size: 14px;
                         letter-spacing: 4px;
                     }
-                }   // Followers Container
+                }
+
+                // Followers Container
 
                 .stat {
                     height: 25%;
@@ -172,9 +174,7 @@ body {
                     gap: 5px;
                     font-size: 14px;
                 }
-            }
-
-            // Box Container
+            }  // Box Container
         } // Follower Stats Container
 
         .overview_container {
@@ -190,7 +190,8 @@ body {
             display: flex;
             flex-direction: column;
 
-            .upper_part, .bottom_part{
+            .upper_part,
+            .bottom_part {
                 display: flex;
                 justify-content: space-evenly;
                 align-items: center;
@@ -235,7 +236,7 @@ body {
                     height: 60%;
                     width: 100%;
                 }
-            } // Box Container
+            }  // Box Container
 
             .text {
                 width: 150%;
@@ -262,9 +263,10 @@ body {
                 width: 100%;
                 padding-right: 20px;
             }
-        }  // Subs Stats Container
-    }  // Main Container 
+        } // Subs Stats Container
+    } // Main Container    
 } // Body 
+ 
 
 // Dark Mode
 .dark_mode {
